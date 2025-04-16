@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CocogooseProRegulartrial';
+    src: url('fonts/CocogooseProRegulartrial.eot');
+    src: url('fonts/CocogooseProRegulartrial.eot') format('embedded-opentype'),
+         url('fonts/CocogooseProRegulartrial.woff2') format('woff2'),
+         url('fonts/CocogooseProRegulartrial.woff') format('woff'),
+         url('fonts/CocogooseProRegulartrial.ttf') format('truetype'),
+         url('fonts/CocogooseProRegulartrial.svg#CocogooseProRegulartrial') format('svg');
+}

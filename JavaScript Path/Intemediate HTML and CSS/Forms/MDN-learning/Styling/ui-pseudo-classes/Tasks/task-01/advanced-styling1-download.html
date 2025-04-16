@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Advanced styling: Task 1</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+        /*  */
+        max-width: 400px;
+        font-family: "Josefin Sans", sans-serif;
+        margin: 20px auto;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      button,
+      input,
+      select {
+        font-family: inherit;
+        font-size: 100%;
+        padding: 0; margin: 0;
+        /*  */
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        padding: 5px;
+        /* height: 30px; */
+        line-height: 1.2em;
+        border-width: 1px;
+        border-color: #666;
+        border-style: solid;
+        border-radius: 3px;
+      }
+
+      input {
+        width: 100%;
+      }
+
+      /*  */
+      :focus-visible {
+        outline: none;
+        border-width: 2px;
+        border-color: #333;
+        border-style: solid;
+        border-radius: 3px;
+      }
+
+      input[type="search"]::-webkit-search-cancel-button {
+        /* display:none; */
+        visibility: hidden;
+      }
+
+      input:hover, input:focus {
+        background-color: #e7e7e7;
+      }
+
+      form {
+        display: flex;
+        /* align-items: center; */
+      }
+
+      form > div {
+        position: relative;
+      }
+
+      /* div {
+        width: 36px;
+        height: 24px;
+        background: url(../search-24px.png) no-repeat center;
+        background-size: 18px;
+      } */
+
+      form > div::after {
+        position: absolute;
+        top: 5px;
+        left: 2px;
+        width: 24px;
+        height: 24px;
+        content: "";
+        background: #fff url(../search-24px.png) no-repeat;
+        scale: 0.75;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <input type="search" name="search" id="search" aria-label="Search our site">
+      <div></div>
+    </form>
+  </body>
+
+</html>

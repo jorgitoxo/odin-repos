@@ -1,0 +1,103 @@
+body {
+    background-color: #fff;
+    color: #333;
+    font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 1em;
+    margin: 0;
+    /*  */
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+* {
+    box-sizing: border-box;
+    --hover-background: hsl(0 0% 97%);
+    --invalid-red: hsl(2, 80%, 66%);
+    --valid-green: hsl(90, 80%, 33%);
+    --button-active: hsl(140 0% 77%);
+}
+
+/*  */
+
+ul {
+    list-style: none;
+}
+
+ul > li {
+    margin-bottom: 20px;
+}
+button,
+input,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 5px;
+
+    line-height: 1.2em;
+    border-width: 1px;
+    border-color: #666;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+    background-color: var(--hover-background);
+}
+
+input:invalid,
+input:valid {
+    border-width: 2px;
+    border-color: var(--invalid-red);
+    border-style: solid;
+    border-radius: 3px;
+}
+
+input:valid {
+    border-color: var(--valid-green);
+}
+
+button:hover {
+    background-color: var(--hover-background);
+}
+
+button:active,
+button:focus {
+    background-color: var(--button-active);
+}
+
+/*  */
+
+li {
+    position: relative;
+}
+
+li:has(> input:valid)::after {
+    content: "✓";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    color: var(--valid-green);
+    top: 25px;
+    right: -20px;
+    scale: 1.4;
+}
+
+li:has(> input:invalid)::before {
+    content: "!";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    color: var(--invalid-red);
+    top: 25px;
+    right: -22px;
+    scale: 1.4;
+}

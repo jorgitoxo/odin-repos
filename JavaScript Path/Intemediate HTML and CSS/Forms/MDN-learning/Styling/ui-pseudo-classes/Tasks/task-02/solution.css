@@ -1,0 +1,54 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+
+  height: 24px;
+  width: 24px;
+  border: 2px solid #ccc;
+}
+
+input[type="radio"]:checked {
+  border: 2px solid red;
+  position: relative;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  background-color: red;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 150px;
+  margin-right: 10px;
+}

@@ -1,0 +1,156 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  --invalid-red: hsl(2, 80%, 50%);
+  --valid-green: hsl(90, 80%, 50%);
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+  width: 400px;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eee;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input + span {
+    position: relative;
+  }
+
+input:required + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    top: -26px;
+    left: -70px;
+}
+
+/*  */
+input + span {
+    position: relative;
+}
+
+/* for the required label */
+input:required + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    top: -28px;
+    left: -70px;
+}
+
+/* for the required icon */
+/* input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+} */
+
+input:invalid:not(:focus) {
+    animation: 0.36s linear infinite alternate border-pulse;
+}
+
+input:invalid + span::before {
+    content: "!";
+    /* background: url(./exclamation-point.svg);
+    background-size: contain; */
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    color: var(--invalid-red);
+    top: -1px;
+    left: 16px;
+    scale: 2.4;
+    /* animation: 0.6s linear infinite alternate icon-pulse; */
+}
+
+input:valid + span::before {
+    content: "✓";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    color: var(--valid-green);
+    top: -1px;
+    left: 10px;
+    scale: 2.4;
+}
+
+@keyframes border-pulse {
+    from {
+        border: 2px solid var(--invalid-red);
+    }
+
+    to {
+        border: 6px solid var(--invalid-red);
+    }
+}
+
+/* @keyframes icon-pulse {
+    from {
+        transform: translate(-3px) scale(1.6);
+    }
+
+    to {
+        transform: translate(-3px) scale(2.4);
+    }
+} */

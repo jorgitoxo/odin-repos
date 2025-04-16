@@ -1,0 +1,182 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+@font-face {
+  font-family: 'Aaargh';
+  src: url('Fonts/Aaargh.woff2') format('woff2'),
+      url('Fonts/Aaargh.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ForumRegular';
+  src: url('Fonts/ForumRegular.woff2') format('woff2'),
+      url('Fonts/ForumRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'didactgothicregular';
+  src: url('Fonts/didactgothicregular.woff2') format('woff2'),
+      url('Fonts/didactgothicregular.woff') format('woff');
+}
+
+* {
+  font-family: "didactgothicregular", system-ui;
+  font-size: 10px;
+}
+
+body * {
+  font-size: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "ForumRegular", system-ui;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+p, li {
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+}
+
+header {
+  text-align: center;
+}
+
+h2 + p {
+  text-indent: 20px;
+}
+
+a {
+  color: #a66;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:active {
+  /* filter: invert(100%); */
+  /* color:rgb(55, 114, 79) */
+  color: transparent;
+  text-shadow: 0px 0px 1px #a66,
+              0px 0px 2px #a66,
+              0px 0px 3px rgb(24, 20, 20),
+              0px 0px 4px rgb(24, 20, 20);
+}
+
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+
+  background-size: 100%;
+  background-image: url("../Images/external-link-52.png");
+  
+}
+
+ul {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+section ul li {
+  padding-left: 2.5rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12 3 19l4-7-4-7 18 7z" fill="rgb(93, 56, 90)"></path></svg>');
+  background-position: left;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}
+
+ol {
+  list-style-type:upper-alpha;
+}
+
+aside ul li {
+  padding-left: 2.5rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 21c-.26 0-.51-.1-.71-.29a.996.996 0 0 1 0-1.41l7.29-7.29-7.29-7.29A.996.996 0 1 1 8.7 3.31l8 8c.39.39.39 1.02 0 1.41l-8 8c-.2.2-.45.29-.71.29Z" fill="rgb(93, 56, 90)"></path></svg>');
+  background-position: left;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}
+
+/* Missed */
+nav ul {
+  padding-left: 0px;
+  margin-top: 40px;
+}
+
+nav a {
+  font-size: 3rem;
+  line-height: 3;
+  text-decoration: none;
+  display: inline-block; /* missed */
+  width: 100%; /* makes button-like element clickable*/
+}
+
+nav a:focus,
+nav a:hover {
+  background-color: antiquewhite;
+}
+
+nav li {
+  text-align: center;
+  outline: 2px solid #a66;
+  margin: 0px 0px 30px;
+}
+
+nav li:active {
+  /* outline-color:rgb(55, 114, 79); */
+  color: transparent;
+  box-shadow: 0px 0px 1px #a66,
+              0px 0px 2px #a66,
+              0px 0px 3px rgb(24, 20, 20),
+              0px 0px 4px rgb(24, 20, 20);
+}

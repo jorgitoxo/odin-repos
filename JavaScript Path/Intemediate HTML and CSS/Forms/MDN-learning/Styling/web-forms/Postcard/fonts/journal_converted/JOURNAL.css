@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'JOURNAL';
+    src: url('fonts/JOURNAL.eot');
+    src: url('fonts/JOURNAL.eot') format('embedded-opentype'),
+         url('fonts/JOURNAL.woff2') format('woff2'),
+         url('fonts/JOURNAL.woff') format('woff'),
+         url('fonts/JOURNAL.ttf') format('truetype'),
+         url('fonts/JOURNAL.svg#JOURNAL') format('svg');
+}
